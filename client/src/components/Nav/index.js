@@ -1,13 +1,22 @@
 import React from "react";
+import '../../../src/App.css';
 
 function Nav() {
 
   return (
-<nav class="navbar navbar-light bg-light" style={{backgroundColor: "#4169E1", fontFamily: "serif"}}>
-  <span class="navbar-brand mb-0 h1">Google Books</span>
-  <span className="ml-5">Saved</span>
-  <span className="ml-5">Search</span>
-</nav>
+    <div>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand">GOOGLE BOOKS</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Saved</a></li>
+            <li class="active"><a href="#">Search</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   );
 }
 

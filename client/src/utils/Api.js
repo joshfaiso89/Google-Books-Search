@@ -3,6 +3,8 @@ import axios from "axios";
 
 export default {
     getBook: () => {
-        return axios.get("GET https://www.googleapis.com/books/v1/volumes?q={search term}")
+        return axios.get("https://www.googleapis.com/books/v1/volumes?q={search term}")
     }
+
 }
+

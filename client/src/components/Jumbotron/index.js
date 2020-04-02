@@ -1,13 +1,11 @@
 import React from "react";
 
-function Jumbotron({ children }) {
+function Jumbotron() {
   return (
-    <div
-      style={{ height: 560, clear: "both", paddingTop: 120, textAlign: "center" }}
-      className="jumbotron border border-success"
-    >
-      {children}
-    </div>
+    <div className="jumbotron">
+    <h1>Google Books Search</h1>
+    <p>Search for and Save Books of Interst</p>
+  </div>
   );
 }
 
