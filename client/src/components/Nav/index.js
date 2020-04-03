@@ -5,14 +5,14 @@ function Nav() {
 
   return (
     <div>
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand">GOOGLE BOOKS</a>
+      <nav className="navbar navbar-default">
+        <div className="container-fluid">
+          <div className="navbar-header">
+            <a className="navbar-brand">GOOGLE BOOKS</a>
           </div>
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Saved</a></li>
-            <li class="active"><a href="#">Search</a></li>
+          <ul className="nav navbar-nav-inline">
+            <li className="active"><a href="#" style={{marginRight: "30px", color: "white"}}>Saved</a></li>
+            <li className="active"><a href="#" style={{color: "white"}}>Search</a></li>
           </ul>
         </div>
       </nav>

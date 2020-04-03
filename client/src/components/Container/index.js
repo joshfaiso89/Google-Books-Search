@@ -1,11 +1,40 @@
-import React from 'react';
+import React, { Component } from "react";
+import api from '../../utils/Api';
 
-function Container() {
-    return(
-        <div className="jumbotron">
-            Saved Books
+class Container extends Component {
+  state = {
+    googleResults: [],
+    search: ''
+  }
+
+  handleInputChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({
+      [name] : value   
+    })
+  }
+
+  handleFormSubmit = () => {
+    api.getBook(this.state.search).then(res => {
+      this.setState({
+        googleResults: res.data.items
+      })
+      console.log(res.data.items)
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        <div className="jumbotron">Search for Books
+        <br></br>
+        <input type="text" name="search" value={this.state.search} onChange={this.handleInputChange}/><button onClick={this.handleFormSubmit}>Search</button>
         </div>
-    )
+     
+      </div>
+    );
+  }
+  
 }
 
 export default Container;
