@@ -9,7 +9,7 @@ function Book ({ title, authors, description, image, link }) {
     <img src={image} class="card-img-top" alt="..." style={{width:"20%"}}></img>
     <div class="card-body">
         <h5 class="card-title">{title}</h5>
-        <p class="card-text">{authors}}</p>
+        <p class="card-text">{authors}</p>
         <p class="card-text">{description}</p>
         <a href={link} class="btn btn-primary">View</a>
         <a href="#" class="btn btn-primary">Save</a> 
