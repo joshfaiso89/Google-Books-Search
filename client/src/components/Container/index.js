@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import api from '../../utils/Api';
+import Book from '../Book';
+import { List } from '../List';
 
 class Container extends Component {
   state = {
@@ -21,6 +23,7 @@ class Container extends Component {
       })
       console.log(res.data.items)
     })
+
   }
 
   render() {
@@ -30,8 +33,14 @@ class Container extends Component {
         <br></br>
         <input type="text" name="search" value={this.state.search} onChange={this.handleInputChange}/><button onClick={this.handleFormSubmit}>Search</button>
         </div>
-     
+        <List>
+       {this.state.googleResults.map(displayBook => (
+         <Book title={displayBook.volumeInfo.title}/>
+       ))
+       }
+        </List>
       </div>
+      
     );
   }
   
