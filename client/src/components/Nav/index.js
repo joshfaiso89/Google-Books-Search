@@ -11,8 +11,8 @@ function Nav() {
             <a className="navbar-brand">GOOGLE BOOKS</a>
           </div>
           <ul className="nav navbar-nav-inline">
-            <li className="active"><a href="#" style={{marginRight: "30px", color: "white"}}>Saved</a></li>
-            <li className="active"><a href="#" style={{color: "white"}}>Search</a></li>
+            <li className="active"><a href="/saved" style={{marginRight: "30px", color: "white"}}>Saved</a></li>
+            <li className="active"><a href="/" style={{color: "white"}}>Search</a></li>
           </ul>
         </div>
       </nav>

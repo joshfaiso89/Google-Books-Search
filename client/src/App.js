@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import Home from './pages/search';
+import Saved from './pages/saved';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
           <Home />
         </Route>
         <Route exact path="/saved">
-          {/* <Detail /> */}
+       <Saved />
         </Route>
         <Route>
           {/* <NoMatch /> */}

@@ -46,7 +46,7 @@ class Container extends Component {
               authors={displayBook.volumeInfo.authors}
               description={displayBook.volumeInfo.description}
               image={displayBook.volumeInfo.imageLinks.thumbnail}
-              link={displayBook.volumeInfo.infoLink}
+              link={displayBook.volumeInfo.info}
             />
           ))}
         </List>
