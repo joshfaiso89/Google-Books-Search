@@ -20,12 +20,12 @@ export default class Home extends Component {
         });
       };
     
-      handleSavedBook = userData => {
-        console.log(userData);
-      api.postBookDB(userData).then(response => {
-                console.log(response)
-      })
-    }
+    //   handleSavedBook = userData => {
+    //     console.log(userData);
+    //   api.postBookDB(userData).then(response => {
+    //             console.log(response)
+    //   })
+    // }
 
     componentDidMount() {
         api.getBookDB(this.state.search).then(res => {
@@ -49,7 +49,7 @@ export default class Home extends Component {
               description={displayBook.description}
               image={displayBook.picture}
               link={displayBook.info}
-              handleOnClick = {handleSavedBook}
+             
             />
           ))}
         </List>
