@@ -12,9 +12,9 @@ function App() {
         <Route exact path={["/", "/search"]}>
           <Home />
         </Route>
-        <Route exact path="/saved">
+        {/* <Route exact path="/saved">
        <Saved />
-        </Route>
+        </Route> */}
         <Route>
           {/* <NoMatch /> */}
         </Route>

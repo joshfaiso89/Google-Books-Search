@@ -3,29 +3,9 @@ import api from "../../utils/Api";
 import Book from "../Book";
 import { List } from "../List";
 
-class Container extends Component {
-  state = {
-    googleResults: [],
-    search: ""
-  };
-
-  handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
-
-  handleFormSubmit = () => {
-    api.getBook(this.state.search).then(res => {
-      this.setState({
-        googleResults: res.data.items
-      });
-      console.log(res.data.items);
-    });
-  };
-
-  render() {
+function Container ({ search, handleFormSubmit, 
+  handleInputChange, handleSavedBook, googleResults})  {
+ 
     return (
       <div>
         <div className="jumbotron">
@@ -34,25 +14,26 @@ class Container extends Component {
           <input
             type="text"
             name="search"
-            value={this.state.search}
-            onChange={this.handleInputChange}
+            value={search}
+            onChange={handleInputChange}
           />
-          <button onClick={this.handleFormSubmit}>Search</button>
+          <button onClick={handleFormSubmit}>Search</button>
         </div>
         <List>
-          {this.state.googleResults.map(displayBook => (
+          { googleResults !=null ? googleResults.map(displayBook => (
             <Book
               title={displayBook.volumeInfo.title}
               authors={displayBook.volumeInfo.authors}
               description={displayBook.volumeInfo.description}
               image={displayBook.volumeInfo.imageLinks.thumbnail}
               link={displayBook.volumeInfo.info}
+              handleOnClick = {handleSavedBook}
             />
-          ))}
+          )) :""}
         </List>
       </div>
     );
   }
-}
+
 
 export default Container;

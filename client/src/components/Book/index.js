@@ -1,28 +1,35 @@
 import React from "react";
-import List, { ListItem } from "../List";
-import api from '../../utils/Api';
+import { List, ListItem } from "../List";
 
-function Book({ title, authors, description, image, link }) {
-  // function saveBook (event) {
-  //   api.postBookDB(userdata)
-  //   return new ListItem;
-  // }
-
+function Book(props) {
   return (
     <div>
       <ListItem>
         <div class="card">
           <img
-            src={image}
+            src={props.image}
             class="card-img-top"
             alt="..."
             style={{ width: "20%" }}
           ></img>
           <div class="card-body">
-            <h5 class="card-title">{title}</h5>
-            <p class="card-text">{authors}</p>
-            <p class="card-text">{description}</p>
-            <a  href="#" class="btn btn-primary" style={{color: "white"}}>
+            <h5 class="card-title">{props.title}</h5>
+            <p class="card-text">{props.authors}</p>
+            <p class="card-text">{props.description}</p>
+            <a
+              onClick={() => {
+                props.handleOnClick({
+                  title: props.title,
+                  author: props.authors.join(' '),
+                  description: props.description,
+                  picture: props.image,
+                  hyperLink: props.link
+                });
+              }}
+              href="#"
+              class="btn btn-primary"
+              style={{ color: "white" }}
+            >
               Save
             </a>
           </div>

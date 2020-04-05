@@ -1,6 +1,6 @@
 import React from "react";
 
-function Container() {
+function Container2() {
   return (
     <div>
       <div className="jumbotron">Saved Books</div>
@@ -8,4 +8,4 @@ function Container() {
   );
 }
 
-export default Container;
+export default Container2;

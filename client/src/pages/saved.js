@@ -5,6 +5,7 @@ import Saved from "../components/Saved";
 import List from '../components/List';
 import Book from '../components/Book';
 import api from "../utils/Api";
+ 
 
 export default class Home extends Component {
     state = {
@@ -12,26 +13,28 @@ export default class Home extends Component {
         search: ""
       };
     
-      handleInputChange = event => {
-        const { name, value } = event.target;
-        this.setState({
-          [name]: value
-        });
-      };
+      // handleInputChange = event => {
+      //   const { name, value } = event.target;
+      //   this.setState({
+      //     [name]: value
+      //   });
+      // };
     
-    componentDidMount() {
-        api.getBookDB(this.state.search).then(res => {
-          this.setState({
-            googleResults: res.data
-          });
-          console.log(res.data);
-        });
-      };
+  
+
+    // componentDidMount() {
+    //     api.getBookDB(this.state.search).then(res => {
+    //       this.setState({
+    //         googleResults: res.data
+    //       });
+    //       console.log(res.data);
+    //     });
+    //   };
 
   render() {
     return (
       <div>
-        <Nav />
+        {/* <Nav />
         <br></br>
         <List>
           {this.state.googleResults.map(displayBook => (
@@ -41,9 +44,10 @@ export default class Home extends Component {
               description={displayBook.description}
               image={displayBook.picture}
               link={displayBook.info}
+           
             />
           ))}
-        </List>
+        </List> */}
         <br></br>
         <br></br>
       </div>
