@@ -1,5 +1,6 @@
 const db = require('../models');
 const axios = require('axios');
+const mongoose = require('mongoose');
 
 function apiRoutes (app) {
     app.get("/api/savedbooks", (req, res) => {
@@ -19,6 +20,12 @@ function apiRoutes (app) {
            
            res.json(response.data);
        } )
+    })
+    app.delete("/api/books/:id", (req, res) => {
+        console.log(req.params.id);
+        db.Book.findOneAndRemove({_id: mongoose.Types.ObjectId(req.params.id)}, function(err, data){
+            res.json(data)
+        });
     })
 } 
 

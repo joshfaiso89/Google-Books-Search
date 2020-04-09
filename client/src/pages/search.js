@@ -11,7 +11,7 @@ export default class Home extends Component {
       }
     
       handleSavedBook = userData => {
-          console.log(userData);
+          console.log(userData, 'data');
         api.postBookDB(userData).then(response => {
                   console.log(response)
         })

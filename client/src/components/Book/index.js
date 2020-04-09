@@ -5,32 +5,41 @@ function Book(props) {
   return (
     <div>
       <ListItem>
-        <div class="card">
+        <div className="card">
           <img
             src={props.image}
-            class="card-img-top"
+            className="card-img-top"
             alt="..."
             style={{ width: "20%" }}
           ></img>
-          <div class="card-body">
-            <h5 class="card-title">{props.title}</h5>
-            <p class="card-text">{props.authors}</p>
-            <p class="card-text">{props.description}</p>
+          <div className="card-body">
+            <h5 className="card-title">{props.title}</h5>
+            <p className="card-text">{props.authors}</p>
+            <p className="card-text">{props.description}</p>
             <a
               onClick={() => {
-                props.handleOnClick({
-                  title: props.title,
-                  author: props.authors.join(' '),
-                  description: props.description,
-                  picture: props.image,
-                  hyperLink: props.link
-                });
-              }}
+
+
+              props.handleOnClick !=null ?
+            (
+              props.handleOnClick({
+                title: props.title,
+                author: props.authors.join(' '),
+                description: props.description,
+                picture: props.image,
+                hyperLink: props.link
+              })
+            ):
+                (
+                  props.handleDelete(props.id)
+
+                ) 
+                }} 
               href="#"
-              class="btn btn-primary"
+              className="btn btn-primary"
               style={{ color: "white" }}
             >
-              Save
+               {props.handleOnClick !=null ?"Saved" : "Delete"} 
             </a>
           </div>
         </div>

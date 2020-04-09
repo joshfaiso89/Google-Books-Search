@@ -6,12 +6,16 @@ export default {
         return axios.get("/api/googlebooks/" + title);
     },
 
-    getBookDB: (title) => {
+    getBookDB: () => {
         return axios.get("/api/savedbooks");
     },
 
     postBookDB: (userData) => {
         return axios.post("/api/books", userData);
+    },
+    deleteBookDB: (id) => {
+        return axios.delete("/api/books/" + id)
     }
+
 }
 

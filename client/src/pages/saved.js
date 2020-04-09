@@ -5,11 +5,11 @@ import Saved from "../components/Saved";
 import List from '../components/List';
 import Book from '../components/Book';
 import api from "../utils/Api";
- 
+// import Delete from '../components/DeleteBtn';
 
 export default class Home extends Component {
     state = {
-        googleResults: [],
+        bookResults: [],
         search: ""
       };
     
@@ -28,13 +28,21 @@ export default class Home extends Component {
     // }
 
     componentDidMount() {
-        api.getBookDB(this.state.search).then(res => {
+        api.getBookDB().then(res => {
           this.setState({
-            googleResults: res.data
+            bookResults: res.data
           });
           console.log(res.data);
         });
       };
+
+    handleDelete = (id) => {
+      console.log('IDIDID', id)
+      api.deleteBookDB(id).then(res => {
+        window.location.reload()
+        console.log(res);
+      })
+    }
 
   render() {
     return (
@@ -42,16 +50,18 @@ export default class Home extends Component {
         <Nav />
         <br></br>
         <List>
-          {this.state.googleResults.map(displayBook => (
+          {this.state.bookResults.map(displayBook => (
             <Book
-              title={displayBook.title}
-              authors={displayBook.authors}
-              description={displayBook.description}
-              image={displayBook.picture}
-              link={displayBook.info}
-             
+            title={displayBook.title}
+            authors={displayBook.author}
+            description={displayBook.description}
+            image={displayBook.picture}
+            link={displayBook.info}
+              id={displayBook._id}
+              handleDelete={this.handleDelete}
             />
           ))}
+          
         </List>
         <br></br>
         <br></br>
