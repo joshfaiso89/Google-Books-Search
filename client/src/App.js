@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import Home from './pages/search';
 import Saved from './pages/saved';
+import Test from './pages/test';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           <Home />
         </Route>
         <Route exact path="/saved">
-       <Saved />
+       <Test />
         </Route>
         <Route>
           {/* <NoMatch /> */}
