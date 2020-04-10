@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import Home from './pages/search';
-import Saved from './pages/saved';
+// import Saved from './pages/saved';
 import Test from './pages/test';
 
 function App() {

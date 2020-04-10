@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import Nav from "../components/Nav";
-import Jumbotron from "../components/Jumbotron";
-import Saved from "../components/Saved";
 import List from '../components/List';
 import Book from '../components/Book';
 import api from "../utils/Api";
