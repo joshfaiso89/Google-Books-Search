@@ -8,7 +8,7 @@ function Nav() {
       <nav className="navbar navbar-default">
         <div className="container-fluid">
           <div className="navbar-header">
-            <a className="navbar-brand">GOOGLE BOOKS</a>
+            <a  href="#" className="navbar-brand">GOOGLE BOOKS</a>
           </div>
           <ul className="nav navbar-nav-inline">
             <li className="active"><a href="/saved" style={{marginRight: "30px", color: "white"}}>Saved</a></li>

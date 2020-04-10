@@ -1,5 +1,5 @@
 import React from "react";
-import { List, ListItem } from "../List";
+import { ListItem } from "../List";
 
 function Book(props) {
   return (
@@ -16,7 +16,7 @@ function Book(props) {
             <h5 className="card-title">{props.title}</h5>
             <p className="card-text">{props.authors}</p>
             <p className="card-text">{props.description}</p>
-            <a
+            <a href="#"
               onClick={() => {
 
 
