@@ -1,5 +1,6 @@
 import React from "react";
 import '../../../src/App.css';
+import {Link} from 'react-router-dom';
 
 function Nav() {
 
@@ -8,11 +9,11 @@ function Nav() {
       <nav className="navbar navbar-default">
         <div className="container-fluid">
           <div className="navbar-header">
-            <a  href="#" className="navbar-brand">GOOGLE BOOKS</a>
+            <Link className="navbar-brand">GOOGLE BOOKS</Link>
           </div>
           <ul className="nav navbar-nav-inline">
-            <li className="active"><a href="/saved" style={{marginRight: "30px", color: "white"}}>Saved</a></li>
-            <li className="active"><a href="/" style={{color: "white"}}>Search</a></li>
+            <li className="active"><Link to="/saved" style={{marginRight: "30px", color: "white"}}>Saved</Link></li>
+            <li className="active"><Link to="/" style={{color: "white"}}>Search</Link></li>
           </ul>
         </div>
       </nav>
