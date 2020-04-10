@@ -1,6 +1,6 @@
 import React from "react";
 import { ListItem } from "../List";
-import {link, Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Book(props) {
   return (

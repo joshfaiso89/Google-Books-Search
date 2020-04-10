@@ -5,6 +5,7 @@ import Book from '../components/Book';
 import api from "../utils/Api";
 // import Delete from '../components/DeleteBtn';
 
+
 export default class Home extends Component {
     state = {
         bookResults: [],
@@ -39,7 +40,7 @@ export default class Home extends Component {
       console.log('IDIDID', id)
       api.deleteBookDB(id).then(res => {
         console.log(res);
-        window.location.href="/saved";
+        window.location.reload(false)
       })
     }
 
