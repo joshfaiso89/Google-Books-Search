@@ -16,7 +16,7 @@ function Book(props) {
             <h5 className="card-title">{props.title}</h5>
             <p className="card-text">{props.authors}</p>
             <p className="card-text">{props.description}</p>
-            <a
+            {/* <a
               onClick={() => {
 
 
@@ -40,7 +40,7 @@ function Book(props) {
               style={{ color: "white" }}
             >
                {props.handleOnClick !=null ?"Saved" : "Delete"} 
-            </a>
+            </a> */}
           </div>
         </div>
       </ListItem>
