@@ -37,7 +37,6 @@ export default class Home extends Component {
     handleDelete = (id) => {
       console.log('IDIDID', id)
       api.deleteBookDB(id).then(res => {
-        window.location.reload()
         console.log(res);
       })
     }
