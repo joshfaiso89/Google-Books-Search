@@ -30,6 +30,7 @@ export default class Home extends Component {
           this.setState({
             bookResults: res.data
           });
+          
           console.log(res.data);
         });
       };
@@ -38,6 +39,7 @@ export default class Home extends Component {
       console.log('IDIDID', id)
       api.deleteBookDB(id).then(res => {
         console.log(res);
+        window.location.href="/saved";
       })
     }
 
