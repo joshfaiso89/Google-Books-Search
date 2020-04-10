@@ -1,5 +1,6 @@
 import React from "react";
 import { ListItem } from "../List";
+import {link, Link} from 'react-router-dom';
 
 function Book(props) {
   return (
@@ -16,7 +17,7 @@ function Book(props) {
             <h5 className="card-title">{props.title}</h5>
             <p className="card-text">{props.authors}</p>
             <p className="card-text">{props.description}</p>
-            {/* <a
+            <Link
               onClick={() => {
 
 
@@ -35,12 +36,11 @@ function Book(props) {
 
                 ) 
                 }} 
-              href="#"
               className="btn btn-primary"
               style={{ color: "white" }}
             >
                {props.handleOnClick !=null ?"Saved" : "Delete"} 
-            </a> */}
+            </Link>
           </div>
         </div>
       </ListItem>
